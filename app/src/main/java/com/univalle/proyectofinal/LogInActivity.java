@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class LogInActivity extends AppCompatActivity {
 
+    //int MyScore
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,20 @@ public class LogInActivity extends AppCompatActivity {
                 String password = pass.getText().toString();
 
                 SharedPreferences.Editor editor = preferences.edit();
-
+                //preferences.edit().putInt("score",200);
                 editor.putString("usuario",usuario);
                 editor.putString("contraseña",password);
 
+                editor.commit();
+
+                String user =preferences.getString("usuario","No Existe el usuario");
+
                 Toast.makeText(LogInActivity.this,"Guardado con exito",Toast.LENGTH_SHORT).show();
+
+                Intent nuevo = new Intent(LogInActivity.this,MainActivity.class);
+                nuevo.putExtra("Usuario",user);
+                startActivity(nuevo);
+                finish();
 
             }
         });
