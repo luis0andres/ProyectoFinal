@@ -1,10 +1,12 @@
 package com.univalle.proyectofinal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.opc1:
-                Toast.makeText(this, "Ha presionado la opcion 1", Toast.LENGTH_SHORT).show();
+                starservice();
+                Toast.makeText(getApplicationContext(),"Servicio Iniciado",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.opc2:
-                Toast.makeText(this, "Ha presionado la opcion 2", Toast.LENGTH_SHORT).show();
+                stopservice();
+                Toast.makeText(getApplicationContext(),"Servicio Detenido",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.opc3:
                 Toast.makeText(this, "Ha presionado la opcion 3", Toast.LENGTH_SHORT).show();
@@ -47,5 +51,21 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
 
+
+
+
+    }
+
+
+    public void starservice()
+    {
+        Intent intent = new Intent(this,MiServicio.class);
+        startService(intent);
+    }
+
+    public void stopservice()
+    {
+        Intent intent = new Intent(this,MiServicio.class);
+        stopService(intent);
     }
 }

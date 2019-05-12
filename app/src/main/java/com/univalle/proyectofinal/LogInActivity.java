@@ -7,11 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 public class LogInActivity extends AppCompatActivity {
 
+    final String URL ="https://d500.epimg.net/cincodias/imagenes/2015/05/08/pyme/1431098283_691735_1431098420_noticia_normal.jpg";
+    ImageView imagen;
     //int MyScore
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +24,9 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
         final TextView user = findViewById(R.id.editText);
         final TextView pass = findViewById(R.id.editText2);
+        imagen = findViewById(R.id.imageView2);
         Button btn = findViewById(R.id.button);
+        Picasso.with(getApplicationContext()).load(URL).into(imagen);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +51,13 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(nuevo);
                 finish();
 
+
+
+
+
             }
         });
+
+
     }
 }
