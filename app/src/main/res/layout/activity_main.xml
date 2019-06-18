@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:orientation="vertical"
     android:background="@drawable/fonddo">
     <include layout="@layout/toolbar"/>
+
     <LinearLayout
+        android:id="@+id/principal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -20,9 +23,9 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:text="GA COMPANY"
-            android:textSize="40dp"/>
+            android:textAlignment="center"
+            android:textSize="40dp" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -34,50 +37,55 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BIENVENIDO A LA APLICACION" />
+            android:text="Add you Dep." />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/deposito"
+            <ImageButton
+                android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Deposito" />
+                app:srcCompat="@android:drawable/btn_dialog" />
 
-            <Button
-                android:id="@+id/ventas"
+            <ImageButton
+                android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Ventas" />
-
+                app:srcCompat="@android:drawable/checkbox_on_background" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/Entraga"
+            <TextView
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Entregas" />
+                android:text="TextView" />
 
-            <Button
-                android:id="@+id/precios"
+            <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Precios" />
+                android:text="TextView" />
         </LinearLayout>
 
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteY="366dp" />
+
+</LinearLayout>
