@@ -87,6 +87,20 @@ public class MainActivity extends AppCompatActivity {
         nombre1 = findViewById(R.id.nombre);
         texto1=findViewById(R.id.textView1);
         nuevo = findViewById(R.id.nuevo);
+        //onclick
+        tabla2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent dep1= new Intent(MainActivity.this,Lista.class);
+                startActivity(dep1);
+            }
+        });
+
+
+
+
+
+        //otros
         final View micontenido=LayoutInflater.from(MainActivity.this).inflate(R.layout.contenido,null);
 
         toolbar =(Toolbar) findViewById(R.id.tool);
