@@ -27,7 +27,7 @@ public class Lista extends AppCompatActivity {
         dao= new ABML(Lista.this);
         lista=dao.listar();
         //adaptando!!!!
-        adapter= new Adaptar(this, lista, dao);
+        adapter= new Adaptar(Lista.this, lista, dao);
         ListView list= findViewById(R.id.lista);
         Button agregar= findViewById(R.id.agregar);
         list.setAdapter(adapter);

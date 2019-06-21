@@ -12,14 +12,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class Adaptar extends BaseAdapter {
+    InforDeposito c;
     ArrayList<InforDeposito> lista;
     ABML dao;
-    InforDeposito c;
+
     Activity a;
-    public Adaptar( Activity a,ArrayList<InforDeposito> lista, ABML dao){
-        this.lista=lista;
-        this.a=a;
-        this.dao=dao;
+    public Adaptar( Activity a2,ArrayList<InforDeposito> lista2, ABML dao2){
+        this.lista=lista2;
+        this.a=a2;
+        this.dao=dao2;
     }
 
     @Override
