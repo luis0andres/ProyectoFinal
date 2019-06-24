@@ -6,23 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
-    
+
     <EditText
+        android:id="@+id/nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name"
-        android:hint="Nombre"/>
+        android:hint="Nombre" />
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/descripcion"
-        android:hint="Descripcion"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/cantidad"
-        android:inputType="number"
-        android:hint="Cantidad"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Descripcion" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

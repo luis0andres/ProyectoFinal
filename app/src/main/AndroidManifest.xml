@@ -26,7 +26,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Lista"></activity>
+        <activity android:name=".Lista" />
+        <activity android:name=".Lista2" />
+        <activity android:name=".Lista3" />
+        <activity android:name=".Lista4" />
+        <activity android:name=".Lista5" />
+        <activity android:name=".Lista6"></activity>
     </application>
 
 </manifest>

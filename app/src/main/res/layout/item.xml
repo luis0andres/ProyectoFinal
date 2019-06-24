@@ -16,13 +16,13 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/t_nombre"
+                android:id="@+id/i_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre" />
 
             <TextView
-                android:id="@+id/t_cantidad"
+                android:id="@+id/i_cantidad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Cantidad" />
@@ -34,24 +34,24 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/t_descripcion"
+                android:id="@+id/i_descripcion"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:text="Descripcion" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/editar"
+            android:id="@+id/i_editar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@mipmap/update"/>
+            android:background="@mipmap/update" />
 
         <Button
-            android:id="@+id/eliminar"
+            android:id="@+id/i_eliminar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@mipmap/delete"/>
+            android:background="@mipmap/delete" />
     </LinearLayout>
 </LinearLayout>

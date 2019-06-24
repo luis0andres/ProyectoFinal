@@ -12,10 +12,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Lista extends AppCompatActivity {
+public class Lista3 extends AppCompatActivity {
 
     depositoabml dao;
-    adaptador adapter;
+    adaptador3 adapter;
     ArrayList<deposito> lista;
     deposito c;
 
@@ -26,8 +26,8 @@ public class Lista extends AppCompatActivity {
         setContentView(R.layout.activity_lista);
 
         dao= new depositoabml(this);
-        lista = dao.listar();
-        adapter= new adaptador(this,lista,dao);
+        lista = dao.listar3();
+        adapter= new adaptador3(this,lista,dao);
         ListView list= findViewById(R.id.lista);
         Button agregar = findViewById(R.id.agregar);
         list.setAdapter(adapter);
@@ -35,27 +35,6 @@ public class Lista extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 // dialogo para modificar o verificar
-
-                /*final Dialog vista= new Dialog(MainActivity.this);
-                vista.setTitle("Informacion");
-                vista.setCancelable(false);
-                vista.setContentView(R.layout.vista);
-                TextView nombre= vista.findViewById(R.id.v_nombre);
-                TextView cantidad= vista.findViewById(R.id.v_cantidad);
-                TextView descripcion= vista.findViewById(R.id.v_descripcion);
-                Button cerrar = vista.findViewById(R.id.volver);
-
-                nombre.setText();
-                cantidad.setText(""+);
-                descripcion.setText(c.getDescripcion());
-
-                vista.show();
-                cerrar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        vista.dismiss();
-                    }
-                });*/
             }
 
         });
@@ -64,7 +43,7 @@ public class Lista extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // dialogo de agregar
-                final Dialog dialogo = new Dialog(Lista.this);
+                final Dialog dialogo = new Dialog(Lista3.this);
                 dialogo.setTitle("Nuevo Elemento");
                 dialogo.setCancelable(true);
                 dialogo.setContentView(R.layout.dialogo);
@@ -83,14 +62,14 @@ public class Lista extends AppCompatActivity {
                         try
                         {
                             c= new deposito(nombre.getText().toString(),Integer.parseInt(cantidad.getText().toString()),descripcion.getText().toString());
-                            dao.insertar(c);
-                            lista = dao.listar();
+                            dao.insertar3(c);
+                            lista = dao.listar3();
                             adapter.notifyDataSetChanged();
                             dialogo.dismiss();
                         }
                         catch (Exception e)
                         {
-                            Toast.makeText(getApplication(),"Debe llenar todos los campos!!",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplication(),"Error",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

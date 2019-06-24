@@ -126,14 +126,47 @@ public class MainActivity extends AppCompatActivity {
 
         nuevo = findViewById(R.id.nuevo);
 
-
-        texto2.setOnClickListener(new View.OnClickListener() {
+        //lista1
+        texto1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,Lista.class);
-                startActivity(intent);
+                lista1();
             }
         });
+        //lista 2
+        texto2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { lista2();     }
+        });
+        //lista 3
+        texto3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lista3();
+            }
+        });
+        //lista 4
+        texto4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lista4();
+            }
+        });
+        //lista 5
+        texto5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lista5();
+            }
+        });
+        //lista 6
+        texto6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lista6();
+            }
+        });
+
 
 
 
@@ -592,5 +625,35 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent = new Intent(this,MiServicio.class);
         stopService(intent);
+    }
+    public void lista1()
+    {
+        Intent intent= new Intent(this,Lista.class);
+        startActivity(intent);
+    }
+    public void lista2()
+    {
+        Intent intent= new Intent(this,Lista2.class);
+        startActivity(intent);
+    }
+    public void lista3()
+    {
+        Intent intent= new Intent(this,Lista3.class);
+        startActivity(intent);
+    }
+    public void lista4()
+    {
+        Intent intent= new Intent(this,Lista4.class);
+        startActivity(intent);
+    }
+    public void lista5()
+    {
+        Intent intent= new Intent(this,Lista5.class);
+        startActivity(intent);
+    }
+    public void lista6()
+    {
+        Intent intent= new Intent(this,Lista6.class);
+        startActivity(intent);
     }
 }
