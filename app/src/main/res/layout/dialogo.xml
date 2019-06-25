@@ -34,13 +34,17 @@
             android:id="@+id/d_agregar"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="@string/agreg" />
+            android:text="@string/agreg"
+            android:background="@drawable/btn_dos"
+            android:textColor="@drawable/txt_btn_dos"/>
 
         <Button
             android:id="@+id/d_cancelar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cancelar" />
+            android:text="@string/cancelar"
+            android:background="@drawable/btn_dos"
+            android:textColor="@drawable/txt_btn_dos"/>
     </LinearLayout>
 
 </LinearLayout>

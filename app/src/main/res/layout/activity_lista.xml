@@ -4,9 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondocel"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".Lista">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="row1.json"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true" />
 
     <Button
         android:id="@+id/agregar"
@@ -15,6 +30,15 @@
         android:layout_weight="1"
         android:background="@mipmap/add"
         android:gravity="center" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="row2.json"
+            app:lottie_imageAssetsFolder="assets"
+            app:lottie_loop="true" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/lista"

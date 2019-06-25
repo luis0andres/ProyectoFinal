@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
@@ -33,6 +34,8 @@ import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView txtescrive,txt1,txt2,txt3,txt4,txt5,txt6,txt7;
+    private Typeface script;
     private Toolbar toolbar;
     private LinearLayout layout;
     ImageButton nuevo;
@@ -100,6 +103,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        txtescrive = (TextView) findViewById(R.id.textViewf);
+        txt1 = (TextView) findViewById(R.id.textView1);
+        txt2 = (TextView) findViewById(R.id.textView2);
+        txt3 = (TextView) findViewById(R.id.textView3);
+        txt4 = (TextView) findViewById(R.id.textView4);
+        txt5 = (TextView) findViewById(R.id.textView);
+        txt6 = (TextView) findViewById(R.id.textView6);
+        txt7 = (TextView) findViewById(R.id.textView7);
+
+        String fuente = "fuente/script.ttf";
+        this.script = Typeface.createFromAsset(getAssets(),fuente);
+        txtescrive.setTypeface(script);
+        txt1.setTypeface(script);
+        txt2.setTypeface(script);
+        txt3.setTypeface(script);
+        txt4.setTypeface(script);
+        txt5.setTypeface(script);
+        txt6.setTypeface(script);
+        txt7.setTypeface(script);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(
@@ -573,25 +595,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.opc1:
-                starservice();
-                Toast.makeText(getApplicationContext(),"inicio",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.opc2:
-                stopservice();
-                Toast.makeText(getApplicationContext(),"se detuvo",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.opc3:
-                Toast.makeText(this,"opcion3", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.opc4:
-                Toast.makeText(this, "opcion4", Toast.LENGTH_SHORT).show();
-                break;
-            case android.R.id.home:
-                Toast.makeText(this, "Ha presionado la flechita de atras", Toast.LENGTH_SHORT).show();
-                break;
-        }
+
         return super.onOptionsItemSelected(item);
 
 
