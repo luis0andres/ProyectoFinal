@@ -178,17 +178,17 @@ public class MainActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         String img1=sharedPreferences.getString("Imagen1","No Encontrado");
-        String nom1 = sharedPreferences.getString("Nombre1",sin_definir);
+        String nom1 = sharedPreferences.getString("Nombre1",getString(R.string.sin_nombre));
         String img2=sharedPreferences.getString("Imagen2","No Encontrado");
-        String nom2 = sharedPreferences.getString("Nombre2",sin_definir);
+        String nom2 = sharedPreferences.getString("Nombre2",getString(R.string.sin_nombre));
         String img3=sharedPreferences.getString("Imagen3","No Encontrado");
-        String nom3 = sharedPreferences.getString("Nombre3",sin_definir);
+        String nom3 = sharedPreferences.getString("Nombre3",getString(R.string.sin_nombre));
         String img4=sharedPreferences.getString("Imagen4","No Encontrado");
-        String nom4 = sharedPreferences.getString("Nombre4",sin_definir);
+        String nom4 = sharedPreferences.getString("Nombre4",getString(R.string.sin_nombre));
         String img5=sharedPreferences.getString("Imagen5","No Encontrado");
-        String nom5 = sharedPreferences.getString("Nombre5",sin_definir);
+        String nom5 = sharedPreferences.getString("Nombre5",getString(R.string.sin_nombre));
         String img6=sharedPreferences.getString("Imagen6","No Encontrado");
-        String nom6 = sharedPreferences.getString("Nombre6",sin_definir);
+        String nom6 = sharedPreferences.getString("Nombre6",getString(R.string.sin_nombre));
 
 
 
