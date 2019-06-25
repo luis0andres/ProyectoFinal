@@ -564,7 +564,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"No Ha Seleccionado una Imagen",Toast.LENGTH_SHORT).show();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
