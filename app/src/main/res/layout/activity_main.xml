@@ -87,7 +87,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="@string/sin_nombre"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -110,7 +110,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="@string/sin_nombre"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -133,7 +133,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="@string/sin_nombre"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -156,7 +156,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="@string/sin_nombre"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -179,7 +179,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="TextView"
+                    android:text="@string/sin_nombre"
                     android:textAlignment="center" />
 
             </LinearLayout>
