@@ -34,7 +34,7 @@
             android:id="@+id/d_agregar"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="@string/agregar" />
+            android:text="@string/agreg" />
 
         <Button
             android:id="@+id/d_cancelar"

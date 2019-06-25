@@ -17,7 +17,7 @@
     <string name="nombre">nombre</string>
     <string name="cantidad">cantidad</string>
     <string name="descripcion">descripcion</string>
-    <string name="agregar">agregar</string>
+    <string name="agreg">agregar</string>
     <string name="cancelar">cancelar</string>
     <string name="modificar">modificar</string>
     <string name="edit_element">editar elemento</string>

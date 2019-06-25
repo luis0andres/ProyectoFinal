@@ -290,9 +290,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }).show();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    Toast.makeText(getApplicationContext(),
-                            "FocusChange: ACTION_UP",
-                            Toast.LENGTH_SHORT).show();
+
                 }
                 return false;
             }
@@ -539,55 +537,34 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(resultCode==RESULT_OK&&requestCode==10)
+        if(resultCode==RESULT_OK)
         {
-            Uri path = data.getData();
-            tabla1.setImageURI(path);
-            dato1 =path.toString();
-
-
+            switch (requestCode)
+            {
+                case 10: Uri path = data.getData();
+                    tabla1.setImageURI(path);
+                    dato1 =path.toString(); break;
+                case 20: path = data.getData();
+                    tabla2.setImageURI(path);
+                    dato3 = path.toString();break;
+                case 30: path = data.getData();
+                    tabla3.setImageURI(path);
+                    dato5 = path.toString();break;
+                case 40:  path = data.getData();
+                    tabla4.setImageURI(path);
+                    dato7 = path.toString();break;
+                case 50:  path = data.getData();
+                    tabla5.setImageURI(path);
+                    dato9 = path.toString();break;
+                case 60: path = data.getData();
+                    tabla6.setImageURI(path);
+                    dato11 = path.toString();break;
+                default:break;
+            }
         }
         else
         {
-            if(resultCode==RESULT_OK&&requestCode==20)
-            {
-                Uri path = data.getData();
-                tabla2.setImageURI(path);
-                dato3 =path.toString();
-            }
-            else
-            {
-                if(resultCode==RESULT_OK&&requestCode==30)
-                {
-                    Uri path = data.getData();
-                    tabla3.setImageURI(path);
-                    dato5 =path.toString();
-                }
-                else
-                {
-                    if(resultCode==RESULT_OK&&requestCode==40)
-                    {
-                        Uri path = data.getData();
-                        tabla4.setImageURI(path);
-                        dato7 =path.toString();
-                    }
-                    else
-                    {
-                        if(resultCode==RESULT_OK&&requestCode==50)
-                        {
-                            Uri path = data.getData();
-                            tabla5.setImageURI(path);
-                            dato9 =path.toString();
-                        }
-                        else
-                        {
-                            Uri path = data.getData();
-                            tabla6.setImageURI(path);
-                            dato11 =path.toString();
-                        }
-                    }
-                }
-            }
+            Toast.makeText(MainActivity.this,"Cancelado",Toast.LENGTH_SHORT).show();
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

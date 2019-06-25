@@ -78,7 +78,7 @@ public class Lista extends AppCompatActivity {
                 final EditText descripcion = dialogo.findViewById(R.id.descripcion);
 
                 Button guardar = dialogo.findViewById(R.id.d_agregar);
-                guardar.setText(getString(R.string.agregar));
+                guardar.setText(getString(R.string.agreg));
                 Button cancelar = dialogo.findViewById(R.id.d_cancelar);
 
                 guardar.setOnClickListener(new View.OnClickListener() {
