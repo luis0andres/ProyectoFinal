@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Final project</string>
+    <string name="ingresar">Start</string>
+    <string name="sin_nombre">no name </string>
+    <string name="agrega_tus_depositos"> add your deposits </string>
+    <string name="Opciones">Options</string>
+    <string name="guardado_exito"> successfully saved </string>
+    <string name="cambair_img">change image </string>
+    <string name="cambiar_nombre_dep">change name</string>
+    <string name="aceptar">Accept</string>
+    <string name="nuevo_nombre">new name</string>
+    <string name="opcion1">option1</string>
+    <string name="opcion2">option2</string>
+    <string name="opcion3">option3</string>
+    <string name="opcion4">option4</string>
+    <string name="nuevoel">new element</string>
+    <string name="nombre">name</string>
+    <string name="cantidad">quantity</string>
+    <string name="descripcion">description</string>
+    <string name="agregar">add</string>
+    <string name="cancelar">cancel</string>
+    <string name="modificar">update</string>
+    <string name="edit_element">edit element</string>
+
+
+
+
+</resources>

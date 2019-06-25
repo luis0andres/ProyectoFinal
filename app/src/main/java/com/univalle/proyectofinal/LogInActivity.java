@@ -39,13 +39,15 @@ public class LogInActivity extends AppCompatActivity {
                 editor.commit();
 
                 String user =preferences.getString("usuario","No Existe el usuario");
+                String guard_exito=getString(R.string.guardado_exito);
 
-                Toast.makeText(LogInActivity.this,"Guardado con exito",Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogInActivity.this,guard_exito,Toast.LENGTH_SHORT).show();
 
                 Intent nuevo = new Intent(LogInActivity.this,MainActivity.class);
                 nuevo.putExtra("Usuario",user);
                 startActivity(nuevo);
                 finish();
+
 
 
 

@@ -11,20 +11,20 @@
         android:id="@+id/nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre" />
+        android:hint="@string/nombre" />
 
     <EditText
         android:id="@+id/cantidad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Cantidad"
+        android:hint="@string/cantidad"
         android:inputType="number" />
 
     <EditText
         android:id="@+id/descripcion"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:hint="Descripcion" />
+        android:hint="@string/descripcion" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,13 +34,13 @@
             android:id="@+id/d_agregar"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:text="Agregar" />
+            android:text="@string/agregar" />
 
         <Button
             android:id="@+id/d_cancelar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cancelar" />
+            android:text="@string/cancelar" />
     </LinearLayout>
 
 </LinearLayout>

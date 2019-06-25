@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 lista6();
             }
         });
+        String sin_definir= getString(R.string.sin_nombre);
 
 
 
@@ -177,17 +178,17 @@ public class MainActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
 
         String img1=sharedPreferences.getString("Imagen1","No Encontrado");
-        String nom1 = sharedPreferences.getString("Nombre1","No Find");
+        String nom1 = sharedPreferences.getString("Nombre1",sin_definir);
         String img2=sharedPreferences.getString("Imagen2","No Encontrado");
-        String nom2 = sharedPreferences.getString("Nombre2","No Find");
+        String nom2 = sharedPreferences.getString("Nombre2",sin_definir);
         String img3=sharedPreferences.getString("Imagen3","No Encontrado");
-        String nom3 = sharedPreferences.getString("Nombre3","Deposito3");
+        String nom3 = sharedPreferences.getString("Nombre3",sin_definir);
         String img4=sharedPreferences.getString("Imagen4","No Encontrado");
-        String nom4 = sharedPreferences.getString("Nombre4","Deposito4");
+        String nom4 = sharedPreferences.getString("Nombre4",sin_definir);
         String img5=sharedPreferences.getString("Imagen5","No Encontrado");
-        String nom5 = sharedPreferences.getString("Nombre5","Deposito5");
+        String nom5 = sharedPreferences.getString("Nombre5",sin_definir);
         String img6=sharedPreferences.getString("Imagen6","No Encontrado");
-        String nom6 = sharedPreferences.getString("Nombre6","Deposito6");
+        String nom6 = sharedPreferences.getString("Nombre6",sin_definir);
 
 
 
@@ -235,9 +236,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         final CharSequence[] items = new CharSequence[2];
+        final String opciones=getString(R.string.Opciones);
+        final String aceptar=getString(R.string.aceptar);
+        String camb_imagen=getString(R.string.cambair_img);
+        String camb_nom=getString(R.string.cambiar_nombre_dep);
 
-        items[0]="Cambiar Imagen";
-        items[1]="Cambiar Nombre Del Deposito";
+        items[0]=camb_imagen;
+        items[1]=camb_nom;
 
         tabla1.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -247,7 +252,8 @@ public class MainActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     // nombre1 = findViewById(R.id.nombre);
                     final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    builder.setTitle("Opciones");
+
+                    builder.setTitle(opciones);
                     builder.setItems(items, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -260,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
                             else
                             {
                                 final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                                builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                                builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         //nombre1 = findViewById(R.id.nombre);
@@ -297,7 +303,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Opciones");
+                builder.setTitle(opciones);
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -310,7 +316,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                            builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //nombre1 = findViewById(R.id.nombre);
@@ -341,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Opciones");
+                builder.setTitle(opciones);
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -354,7 +360,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                            builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //nombre1 = findViewById(R.id.nombre);
@@ -384,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Opciones");
+                builder.setTitle(opciones);
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -397,7 +403,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                            builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //nombre1 = findViewById(R.id.nombre);
@@ -428,7 +434,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Opciones");
+                builder.setTitle(opciones);
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -441,7 +447,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                            builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //nombre1 = findViewById(R.id.nombre);
@@ -471,7 +477,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setTitle("Opciones");
+                builder.setTitle(opciones);
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -484,7 +490,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                             final AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                            builder2.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                            builder2.setPositiveButton(aceptar, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     //nombre1 = findViewById(R.id.nombre);
@@ -586,22 +592,24 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.opc1:
                 starservice();
-                Toast.makeText(getApplicationContext(),"Servicio Iniciado",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"inicio",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.opc2:
                 stopservice();
-                Toast.makeText(getApplicationContext(),"Servicio Detenido",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"se detuvo",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.opc3:
-                Toast.makeText(this, "Ha presionado la opcion 3", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"opcion3", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.opc4:
-                Toast.makeText(this, "Ha presionado la opcion 4", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "opcion4", Toast.LENGTH_SHORT).show();
                 break;
             case android.R.id.home:
                 Toast.makeText(this, "Ha presionado la flechita de atras", Toast.LENGTH_SHORT).show();

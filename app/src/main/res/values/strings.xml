@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">Proyecto Final</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="sin_nombre">sin nombre </string>
+    <string name="agrega_tus_depositos"> agrega tus depositos </string>
+    <string name="Opciones">Opciones</string>
+    <string name="guardado_exito"> guardado con exito </string>
+    <string name="cambair_img">cambiar imagen </string>
+    <string name="cambiar_nombre_dep">cambiar nombre del deposito</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="nuevo_nombre">nuevo nombre</string>
+    <string name="opcion1">opcion1</string>
+    <string name="opcion2">opcion2</string>
+    <string name="opcion3">opcion3</string>
+    <string name="opcion4">opcion4</string>
+    <string name="nuevoel">nuevo elemento</string>
+    <string name="nombre">nombre</string>
+    <string name="cantidad">cantidad</string>
+    <string name="descripcion">descripcion</string>
+    <string name="agregar">agregar</string>
+    <string name="cancelar">cancelar</string>
+    <string name="modificar">modificar</string>
+    <string name="edit_element">editar elemento</string>
+
+
+
+
+
 </resources>

@@ -17,7 +17,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Nuevo nombre"/>
+            android:hint="@string/nuevo_nombre"/>
     </LinearLayout>
 
 </LinearLayout>

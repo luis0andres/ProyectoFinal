@@ -74,6 +74,7 @@ public class adaptador3 extends BaseAdapter {
         cantidad.setText(""+c.getCantidad());
         descripcion.setText(c.getDescripcion());
 
+
         editar.setTag(position);
         eliminar.setTag(position);
 
@@ -128,6 +129,7 @@ public class adaptador3 extends BaseAdapter {
 
             }
         });
+
 
         eliminar.setOnClickListener(new View.OnClickListener() {
             @Override

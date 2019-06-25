@@ -14,16 +14,19 @@ import java.util.ArrayList;
 
 public class Lista extends AppCompatActivity {
 
+
     depositoabml dao;
     adaptador adapter;
     ArrayList<deposito> lista;
     deposito c;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista);
+
 
         dao= new depositoabml(this);
         lista = dao.listar();
@@ -60,12 +63,13 @@ public class Lista extends AppCompatActivity {
 
         });
         //boton agregar
+
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // dialogo de agregar
                 final Dialog dialogo = new Dialog(Lista.this);
-                dialogo.setTitle("Nuevo Elemento");
+                dialogo.setTitle(getString(R.string.nuevoel));
                 dialogo.setCancelable(true);
                 dialogo.setContentView(R.layout.dialogo);
                 dialogo.show();
@@ -74,7 +78,7 @@ public class Lista extends AppCompatActivity {
                 final EditText descripcion = dialogo.findViewById(R.id.descripcion);
 
                 Button guardar = dialogo.findViewById(R.id.d_agregar);
-                guardar.setText("Agregar");
+                guardar.setText(getString(R.string.agregar));
                 Button cancelar = dialogo.findViewById(R.id.d_cancelar);
 
                 guardar.setOnClickListener(new View.OnClickListener() {

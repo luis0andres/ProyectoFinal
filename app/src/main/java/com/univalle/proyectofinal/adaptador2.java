@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,13 @@ import java.util.ArrayList;
 
 public class adaptador2 extends BaseAdapter {
 
+
     ArrayList<deposito> lista;
     depositoabml dao;
     deposito c;
     Activity a;
     int id=0;
+
 
     public int getId() {
         return id;
